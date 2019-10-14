@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.4.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.example</groupId>
+	<artifactId>demo-2</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>demo-2</name>
+	<description>Demo project for Spring Boot</description>
+
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+		</resources>
+	</build>
+	
+	<repositories>
+		<repository>
+			<id>spring-release</id>
+			<name>Spring Releases</name>
+			<url>http://lib.mzdev.kr/repository/spring-release/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>http://lib.mzdev.kr/repository/spring-milestone/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>apache</id>
+			<url>http://lib.mzdev.kr/repository/apache/</url>
+		</repository>
+		<repository>
+			<id>codelds</id>
+			<url>http://lib.mzdev.kr/repository/codelds/</url>
+		</repository>
+		<repository>
+			<id>mavencentral</id>
+			<url>http://lib.mzdev.kr/repository/maven-central/</url>
+		</repository>
+		<repository>
+			<id>nexus</id>
+			<url>http://lib.mzdev.kr/repository/devops-public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+	        <id>central</id>
+	        <url>http://lib.mzdev.kr/repository/maven-central/</url>
+	        <releases>
+	            <enabled>true</enabled>
+	        </releases>
+	        <snapshots>
+	            <enabled>true</enabled>
+	        </snapshots>
+    	</repository>
+	</repositories>
+	
+	<pluginRepositories>
+	    <pluginRepository>
+	      <id>central</id>
+	      <url>http://lib.mzdev.kr/repository/maven-central/</url>
+	      <releases>
+	            <enabled>true</enabled>
+	        </releases>
+	      <snapshots>
+	            <enabled>true</enabled>
+	      </snapshots>
+	    </pluginRepository>
+  	</pluginRepositories>
+	
+	<distributionManagement>
+		<repository>
+			<id>nexus</id>
+			<url>http://lib.mzdev.kr/repository/devops-releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<url>http://lib.mzdev.kr/repository/devops-snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+</project>

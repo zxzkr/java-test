@@ -1,0 +1,36 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.4.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.4.RELEASE'
+	id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	//mavenCentral()
+	maven {
+		url "http://lib.mzdev.kr/repository/spring-release/"
+	}
+	maven {
+		url "http://lib.mzdev.kr/repository/spring-milestone"
+	}
+	maven {
+		url "http://lib.mzdev.kr/repository/apache/"
+	}
+	maven {
+		url "http://lib.mzdev.kr/repository/codelds/"
+	}
+	maven {
+		url "http://lib.mzdev.kr/repository/maven-central/"
+	}
+	maven {
+		url "http://lib.mzdev.kr/repository/devops-public/"
+	}
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
